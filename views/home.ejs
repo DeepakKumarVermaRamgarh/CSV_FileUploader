@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="./css/home.css">
+<main>
+    <div class="file-upload-area">
+        <h1>Upload CSV File Here...</h1>
+        <h3>Read CSV files and preview all data</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="csvFile"><i class="fa-solid fa-file-csv fa-xl"></i></label>
+            <input type="file" name="csvFile" id="csvFile" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <div class="files-display-area">
+        <h1>Uploaded Files</h1>
+        <div class="no-file">Please upload any file first</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Upload Time</th>
+                    <th>File Size</th>
+                    <th style="text-align: center;">Preview</th>
+                    <th style="text-align: center;">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Currency.csv</td>
+                    <td>06/09/2023 03:56 PM</td>
+                    <td>500 KB</td>
+                    <td style="text-align: center;"><a href="#"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                    <td style="text-align: center;"><a href="#"><i class="fa-regular fa-trash-can "
+                                style="color: #f00;"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</main>

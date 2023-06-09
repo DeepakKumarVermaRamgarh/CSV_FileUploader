@@ -1,0 +1,95 @@
+main {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.file-upload-area {
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.file-upload-area h1 {
+  color: blueviolet;
+}
+.file-upload-area h3 {
+  color: #aaa;
+}
+
+.file-upload-area form {
+  width: 100%;
+  border: 2px dashed lightgrey;
+  background-color: #f8f8f8;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.file-upload-area input[type="file"] {
+  display: none;
+}
+
+.file-upload-area label::after {
+  content: "Choose CSV File";
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.file-upload-area form button {
+  padding: 15px 30px;
+  outline: none;
+  border: 1px solid blueviolet;
+  background-color: transparent;
+  color: blueviolet;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.file-upload-area form button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+
+.files-display-area {
+    width: 95%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.files-display-area h1{
+    background-color: blueviolet;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.files-display-area table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.files-display-area table th, td {
+  text-align: left;
+  padding: 12px;
+}
+
+.files-display-area table thead{
+    background-color: #eee;
+     font-weight: bold;
+}
+
+.files-display-area table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.no-file {
+    font-size: 1.5rem;
+    color: gray;
+    height: 8rem;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+
