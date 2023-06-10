@@ -5,9 +5,13 @@ const db = require("./config/mongoose");
 const app = express();
 
 app.use(expressEJSLayouts);
+app.use(express.urlencoded());
+
 app.use("/", require("./routes"));
 
 app.use(express.static("./assets"));
+
+app.use(require("./middlewares/ErrorMiddleware"));
 
 app.set("view engine", "ejs");
 app.set("views", "./views");

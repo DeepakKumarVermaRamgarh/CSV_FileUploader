@@ -14,6 +14,9 @@ const fileSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    fileSize: {
+      type: Number,
+    },
   },
   {
     timestamps: {

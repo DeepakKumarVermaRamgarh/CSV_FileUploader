@@ -1,10 +1,15 @@
 <link rel="stylesheet" href="./css/home.css">
+<link rel="stylesheet" href="./css/nav-bar.css">
+<nav>
+    <h1>CSV FILE UPLOADER</h1>
+</nav>
 <main>
     <div class="file-upload-area">
         <h1>Upload CSV File Here...</h1>
         <h3>Read CSV files and preview all data</h3>
         <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="csvFile"><i class="fa-solid fa-file-csv fa-xl"></i></label>
+            <label for="csvFile" id="csv-file-label" data-content="Choose CSV File"><i
+                    class="fa-solid fa-file-csv fa-xl"></i></label>
             <input type="file" name="csvFile" id="csvFile" accept=".csv" required>
             <button type="submit">Upload</button>
         </form>
@@ -12,30 +17,43 @@
 
     <div class="files-display-area">
         <h1>Uploaded Files</h1>
-        <div class="no-file">Please upload any file first</div>
-        <table>
-            <thead>
-                <tr>
-                    <th>File Name</th>
-                    <th>Upload Time</th>
-                    <th>File Size</th>
-                    <th style="text-align: center;">Preview</th>
-                    <th style="text-align: center;">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Currency.csv</td>
-                    <td>06/09/2023 03:56 PM</td>
-                    <td>500 KB</td>
-                    <td style="text-align: center;"><a href="#"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
-                    <td style="text-align: center;"><a href="#"><i class="fa-regular fa-trash-can "
-                                style="color: #f00;"></i></td>
-                </tr>
-            </tbody>
-        </table>
-
+        <% if(files.length> 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Upload Time</th>
+                        <th>File Size</th>
+                        <th style="text-align: center;">Preview</th>
+                        <th style="text-align: center;">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let file of files) { %>
+                        <tr>
+                            <td>
+                                <%= file.fileName %>
+                            </td>
+                            <td>
+                                <%= file.createdAt.toLocaleDateString()%>
+                                    <%= file.createdAt.toLocaleTimeString() %>
+                            </td>
+                            <td>
+                                <%= file.fileSize %> bytes
+                            </td>
+                            <td style="text-align: center;"><a href="/preview/<%= file.file %>"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                            <td style="text-align: center;"><a href="/delete/<%= file.file %>"><i
+                                        class="fa-regular fa-trash-can " style="color: #f00;"></i></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+            <% } else { %>
+                <div class="no-file">Please upload any file first</div>
+                <% } %>
     </div>
 
 </main>
+
+<script src="../js/home.js"></script>

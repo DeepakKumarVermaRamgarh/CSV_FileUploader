@@ -1,0 +1,125 @@
+* {
+  scroll-margin-top: 100px;
+}
+
+main {
+  width: 100%;
+  min-height: 80vh;
+  overflow-x: hidden;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ccc;
+  color: blueviolet;
+}
+
+.search-area .search {
+  width: 400px;
+  height: 25px;
+  position: relative;
+}
+
+.search-area .search input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 50px 10px 20px;
+  outline: none;
+}
+
+.select-count{
+  width: 80px;
+  height: 25px;
+  position: relative;
+}
+
+.select-count select{
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+.select-count::before{
+  content: 'Rows per page';
+  position: absolute;
+  top: -7px;
+  left: 5px;
+  background: #fff;
+  margin: 0 2px;
+  font-size: .7em;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.display-area {
+  width: 100%;
+  min-height: 70vh;
+}
+
+.display-area table {
+  width: 95%;
+  max-width: 95%;
+  margin: 30px auto 5px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  table-layout: fixed;
+}
+
+.display-area table th,
+.display-area table td {
+  padding: 12px;
+  text-align: left;
+  overflow: scroll;
+}
+
+.display-area table th {
+  position: sticky;
+  top: 50px;
+  font-weight: bold;
+  background-color: blueviolet;
+  color: #fff;
+  font-size: 1.12rem;
+  cursor: pointer;
+}
+
+.display-area table td {
+  font-size: 1.08rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.highlight {
+  background-color: rgba(187, 126, 243, 0.5);
+  color: #fff;
+}
+
+.pagination {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination input[type="button"] {
+  color: black;
+  padding: 8px 10px;
+}
+
+.pagination input[type="button"]:hover {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 450px) {
+  .search-area {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
