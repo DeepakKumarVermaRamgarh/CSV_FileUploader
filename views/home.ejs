@@ -1,9 +1,14 @@
-<link rel="stylesheet" href="./css/home.css">
-<link rel="stylesheet" href="./css/nav-bar.css">
+<!-- CSS stylesheets -->
+<link rel="stylesheet" href="./css/home.css"> <!-- Home page CSS -->
+<link rel="stylesheet" href="./css/nav-bar.css"> <!-- Navigation bar CSS -->
+
+<!-- Navigation bar -->
 <nav>
     <h1>CSV FILE UPLOADER</h1>
 </nav>
+
 <main>
+    <!-- File upload area -->
     <div class="file-upload-area">
         <h1>Upload CSV File Here...</h1>
         <h3>Read CSV files and preview all data</h3>
@@ -15,9 +20,11 @@
         </form>
     </div>
 
+    <!-- Files display area -->
     <div class="files-display-area">
         <h1>Uploaded Files</h1>
         <% if(files.length> 0) { %>
+            <!-- Display the table of uploaded files -->
             <table>
                 <thead>
                     <tr>
@@ -50,10 +57,11 @@
                 </tbody>
             </table>
             <% } else { %>
+                <!-- Display when no files are uploaded -->
                 <div class="no-file">Please upload any file first</div>
                 <% } %>
     </div>
-
 </main>
 
-<script src="../js/home.js"></script>
+<!-- JavaScript file -->
+<script src="../js/home.js"></script> <!-- Home page JavaScript -->

@@ -1,27 +1,28 @@
-<link rel="stylesheet" href="../css/nav-bar.css">
-<link rel="stylesheet" href="../css/preview_file.css">
+<link rel="stylesheet" href="../css/nav-bar.css"> <!-- Stylesheet for the navigation bar -->
+<link rel="stylesheet" href="../css/preview_file.css"> <!-- Stylesheet for the preview file page -->
+
 <nav>
-    <h1>CSV FILE VIEWER</h1>
+    <h1>CSV FILE VIEWER</h1> <!-- Heading for the page -->
     <h2>
-        <%= fileName %>
+        <%= fileName %> <!-- Display the file name -->
     </h2>
-    <a href="/"><i class="fa-solid fa-delete-left fa-lg"></i></a>
+    <a href="/"><i class="fa-solid fa-delete-left fa-lg"></i></a> <!-- button to go back to the home page -->
 </nav>
 
 <main>
     <div class="search-area">
         <div class="rowsCount">
             <h3>Rows Count : <%= data.length %>
-            </h3>
+            </h3> <!-- Display the number of rows in the data -->
         </div>
         <div class="search">
-            <input type="text" name="search" id="search" placeholder="Search...">
+            <input type="text" name="search" id="search" placeholder="Search..."> <!-- Search input field -->
         </div>
         <div class="select-count">
             <select name="rows-count" id="rows-count">
-                <option value="10" selected>10</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
+                <option value="10" selected>10</option> <!-- Option to display 10 rows -->
+                <option value="50">50</option> <!-- Option to display 50 rows -->
+                <option value="100">100</option> <!-- Option to display 100 rows -->
             </select>
         </div>
     </div>
@@ -32,7 +33,7 @@
                 <tr>
                     <% for(let i=0; i < head.length; i++) { %>
                         <th onclick="sortTable(<%= i %>)">
-                            <%= head[i] %>
+                            <%= head[i] %> <!-- Table header with column names -->
                         </th>
                         <% } %>
                 </tr>
@@ -43,7 +44,7 @@
                     <tr>
                         <% for(let key of Object.keys(row)) { %>
                             <td>
-                                <%= row[key] %>
+                                <%= row[key] %> <!-- Table cell with data value -->
                             </td>
                             <% } %>
                     </tr>
@@ -55,4 +56,4 @@
 
 </main>
 
-<script src="../js/preview_file.js"></script>
+<script src="../js/preview_file.js"></script> <!-- JavaScript file for the preview file functionality -->
