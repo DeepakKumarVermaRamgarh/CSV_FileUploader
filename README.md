@@ -45,38 +45,38 @@ Access the web application by opening http://localhost:4000 in your web browser.
 
 ## Folder Structure
 
-CSV_UPLOADER/
-|── |assets/
-│ | ├── css/
-│ │ | ├── home.css
-| | | ├── nav-bar.css
-| | | ├── preview_file.css
-│ | ├── js/
-│ | ├── home.js
-│ | ├── preview_file.js
-├── config/
-│ └── mongoose.js
-├── controllers/
-│ ├── fileController.js
-│ └── homeController.js
-├── middlewares/
-│ ├── catchAsyncError.js
-│ ├── Error.js
-│ └── ErrorMiddleware.js
-├── models/
-│ └── fileModel.js
-├── routes/
-│ └── index.js
-├── views/
-│ ├── home.ejs
-│ └── layout.ejs
-│ └── preview_file.ejs
-├── uploads/
-│ ├── files/
-├── .gitignore
-├── package.json
-├── README.md
-└── index.js
+   CSV_UPLOADER/
+   |── |assets/
+   │   |      ├── css/
+   │   │      |     ├── home.css
+   |   |      |     ├── nav-bar.css
+   |   |      |     ├── preview_file.css
+   │   |      ├── js/
+   │   |            ├── home.js
+   │   |            ├── preview_file.js
+   ├── config/
+   │   └── mongoose.js
+   ├── controllers/
+   │   ├── fileController.js
+   │   └── homeController.js
+   ├── middlewares/
+   │   ├── catchAsyncError.js
+   │   ├── Error.js
+   │   └── ErrorMiddleware.js
+   ├── models/
+   │   └── fileModel.js
+   ├── routes/
+   │   └── index.js
+   ├── views/
+   │   ├── home.ejs
+   │   └── layout.ejs
+   │   └── preview_file.ejs
+   ├── uploads/
+   │   ├── files/
+   ├── .gitignore
+   ├── package.json
+   ├── README.md
+   └── index.js
 
 - assets/: Contains CSS and JavaScript files for styling and client-side functionality.
 - config/: Contains the Mongoose configuration file.
@@ -99,3 +99,7 @@ CSV_UPLOADER/
 Feel free to modify and customize the README file according to your specific requirements and additional information you want to provide.
 
 ## Screenshots
+![image](https://github.com/DeepakKumarVermaRamgarh/CSV_FileUploader/assets/128968635/9fd489a6-5348-4f20-a7ac-245ba0c6910b)
+![image](https://github.com/DeepakKumarVermaRamgarh/CSV_FileUploader/assets/128968635/888bb1dc-ee29-452f-861b-ef683a16f2be)
+![image](https://github.com/DeepakKumarVermaRamgarh/CSV_FileUploader/assets/128968635/3df07922-a1c8-442c-a0c1-16ebacfc8f32)
+
